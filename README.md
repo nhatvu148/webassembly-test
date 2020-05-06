@@ -6,7 +6,7 @@
 // emcc lib/demo.c -s WASM=1 -O2 -o public/demo.js
 // emcc lib/demo.c -s WASM=1 -O2 -o public/demo.js --closure 1
 // emcc lib/demo.c -s WASM=1 -O2 --post-js public/ready.js -o public/demo.js --closure 1
-
+// emcc lib/demo.c -s WASM=1 -s EXPORTED_FUNCTIONS="['_getNum', '_main']" -o public/demo.js
 //////////////////////////////////////////////////////
 
 (module
