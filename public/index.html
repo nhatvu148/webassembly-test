@@ -7,10 +7,20 @@
   </head>
   <body>
     <h1>WebAssembly Demo</h1>
-    <script src="demo.js"></script>
+    <!-- <script src="demo.js"></script> -->
+    <script src="imports.js"></script>
     <script>
       // Wrap C _greetname as a JS function
-      const greetname = cwrap("greetname", "string", ["string"]);
+      // const greetname = cwrap("greetname", "string", ["string"]);
+
+      // Return a useable val to C
+      function getNum() {
+        return 123;
+      }
+
+      function getStr() {
+        return "Hello from JS!";
+      }
     </script>
   </body>
 </html>
