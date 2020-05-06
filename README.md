@@ -1,5 +1,14 @@
 // Run main.c at https://wasdk.github.io/WasmFiddle/
 // Change custom memory at https://webassembly.studio/
+// emcc lib/demo.c -s WASM=1 -o public/demo.js
+// emcc lib/demo.c -s WASM=1 -o public/demo.html
+// emcc lib/demo.c -s WASM=1 -s SIDE_MODULE=1 -o public/demo.wasm
+// emcc lib/demo.c -s WASM=1 -O2 -o public/demo.js
+// emcc lib/demo.c -s WASM=1 -O2 -o public/demo.js --closure 1
+// emcc lib/demo.c -s WASM=1 -O2 --post-js public/ready.js -o public/demo.js --closure 1
+
+//////////////////////////////////////////////////////
+
 (module
 (type $t0 (func (param i32)))
   (type $t1 (func (param i32 i32)))
