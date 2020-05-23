@@ -9,6 +9,7 @@
 - emcc lib/demo.c -s WASM=1 -O2 --post-js public/ready.js -o public/demo.js --closure 1 
 - emcc lib/demo.c -s WASM=1 -s EXPORTED_FUNCTIONS="['_getNum', '_main']" -o public/demo.js 
 - emcc lib/imports.c -s WASM=1 -s -o public/imports.js
+- emcc lib/test.c -s WASM=1 -s EXTRA_EXPORTED_RUNTIME_METHODS="['callMain']" -s INVOKE_RUN=0 -o public/test.js
 
 * * *
 # Template Assembly:
