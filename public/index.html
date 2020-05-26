@@ -9,7 +9,7 @@
     <h1>WebAssembly Demo</h1>
     <!-- <script src="demo.js"></script> -->
     <script src="test.js"></script>
-    <script>
+    <script type="text/javascript">
       // Wrap C _greetname as a JS function
       // const greetname = cwrap("greetname", "string", ["string"]);
 
@@ -21,12 +21,14 @@
       // function getStr() {
       //   return "Hello from JS!";
       // }
-      console.log(Module);
+      // console.log(Module);
 
       // Wait for WASM (Emscripten) runtime to be ready
       Module["onRuntimeInitialized"] = () => {
         console.log("Runtime Ready");
         // console.log(_getStr());
+
+        FS.writeFile("/myFile.txt", "abc\ndef\nghi");
       };
     </script>
   </body>
