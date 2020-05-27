@@ -3,7 +3,7 @@ const app = express();
 
 // Serve static files from /public
 app.use(
-  express.static("seqtk", {
+  express.static("public", {
     setHeaders: (res, path, stat) => {
       // Serve .wasm files with correct mime type
       if (path.endsWith(".wasm")) {
